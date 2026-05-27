@@ -23,7 +23,7 @@ export default function App() {
           <button className="lang-btn" onClick={() => setLang(lang === 'es' ? 'en' : 'es')}>
             {lang === 'es' ? 'EN' : 'ES'}
           </button>
-          <a href={wa} className="nav-cta" target="_blank" rel="noreferrer">
+          <a href="#contact" className="nav-cta">
             {es ? 'Contáctanos' : 'Contact us'}
           </a>
         </div>
@@ -184,7 +184,7 @@ export default function App() {
             <p className="section-sub">
               {es
                 ? 'Cada pasajero sentado, sin a dónde más mirar. Tu marca frente a sus ojos todo el viaje.'
-                : 'Every passenger seated, with nowhere else to look. Your brand in front of them the whole ride.'}
+                : 'Every passenger seated, fully present for 15–30 minutes. Your brand in front of them the whole ride.'}
             </p>
           </div>
           <div className="interior-photos">
@@ -233,7 +233,7 @@ export default function App() {
           <div className="pricing-cards">
             <div className="pcard">
               <h3>{es ? 'Por auto' : 'Per car'}</h3>
-              <div className="pcard-price">₡50,000<span>/sem</span></div>
+              <div className="pcard-price">₡50,000<span>{es ? '/sem' : '/wk'}</span></div>
               <p>{es ? 'Ideal para probar el canal con 1 vehículo.' : 'Ideal for testing the channel with 1 vehicle.'}</p>
               <ul>
                 <li>{es ? '2 stickers + parachoques' : '2 stickers + bumper'}</li>
@@ -247,7 +247,7 @@ export default function App() {
             <div className="pcard pcard-featured">
               <span className="pcard-badge">{es ? 'Más popular' : 'Most popular'}</span>
               <h3>{es ? 'Paquete 4 autos' : '4-car package'}</h3>
-              <div className="pcard-price">₡170,000<span>/sem</span></div>
+              <div className="pcard-price">₡170,000<span>{es ? '/sem' : '/wk'}</span></div>
               <p>{es ? '15% de descuento — mayor cobertura en la GAM.' : '15% discount — wider coverage across the GAM.'}</p>
               <ul>
                 <li>{es ? '4 vehículos cubiertos' : '4 vehicles covered'}</li>
@@ -261,7 +261,7 @@ export default function App() {
             </div>
             <div className="pcard">
               <h3>{es ? 'Flota completa' : 'Full fleet'}</h3>
-              <div className="pcard-price">₡320,000<span>/sem</span></div>
+              <div className="pcard-price">₡320,000<span>{es ? '/sem' : '/wk'}</span></div>
               <p>{es ? 'Máxima visibilidad — los 8 vehículos en circulación.' : 'Maximum visibility — all 8 vehicles on the road.'}</p>
               <ul>
                 <li>{es ? '8 vehículos cubiertos' : '8 vehicles covered'}</li>
@@ -283,7 +283,7 @@ export default function App() {
       </section>
 
       {/* ── CTA BANNER ── */}
-      <section className="cta-banner">
+      <section id="contact" className="cta-banner">
         <div className="container">
           <h2>{es ? '¿Listo para poner tu marca en movimiento?' : 'Ready to put your brand on the move?'}</h2>
           <p>{es ? 'Escríbenos por WhatsApp y tenemos una propuesta lista en 24 horas.' : 'Message us on WhatsApp and we\'ll have a proposal ready in 24 hours.'}</p>
@@ -291,9 +291,20 @@ export default function App() {
             {es ? 'Escribir por WhatsApp' : 'Message on WhatsApp'}
           </a>
           <div className="cta-contacts">
-            <a href="mailto:info@auto-impacto.com">info@auto-impacto.com</a>
+            <a href="tel:+50663091161" className="cta-phone">
+              <span className="cta-phone-label">{es ? 'O llámenos:' : 'Or call us:'}</span>
+              +506 6309-1161
+            </a>
             <span className="footer-sep">·</span>
-            <a href="https://www.instagram.com/autoimpacto__" target="_blank" rel="noreferrer">@autoimpacto__</a>
+            <a href="mailto:info@auto-impacto.com" className="cta-icon-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              info@auto-impacto.com
+            </a>
+            <span className="footer-sep">·</span>
+            <a href="https://www.instagram.com/autoimpacto__" target="_blank" rel="noreferrer" className="cta-icon-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              @autoimpacto__
+            </a>
           </div>
         </div>
       </section>
@@ -302,11 +313,19 @@ export default function App() {
       <footer className="footer">
         <span className="footer-brand">Sneha Turismo</span>
         <span className="footer-sep">·</span>
-        <a href={wa} target="_blank" rel="noreferrer">+506 63091161</a>
+        <a href={wa} target="_blank" rel="noreferrer">WhatsApp</a>
         <span className="footer-sep">·</span>
-        <a href="mailto:info@auto-impacto.com">info@auto-impacto.com</a>
+        <a href="tel:+50663091161">📞 +506 6309-1161</a>
         <span className="footer-sep">·</span>
-        <a href="https://www.instagram.com/autoimpacto__" target="_blank" rel="noreferrer">@autoimpacto__</a>
+        <a href="mailto:info@auto-impacto.com" className="footer-icon-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          info@auto-impacto.com
+        </a>
+        <span className="footer-sep">·</span>
+        <a href="https://www.instagram.com/autoimpacto__" target="_blank" rel="noreferrer" className="footer-icon-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          @autoimpacto__
+        </a>
       </footer>
 
     </div>

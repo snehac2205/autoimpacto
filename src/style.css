@@ -593,6 +593,29 @@ body { background: var(--white); color: var(--text); line-height: 1.6; }
   transition: color 0.2s;
 }
 .cta-contacts a:hover { color: #fff; }
+.cta-icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.footer-icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.cta-phone {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem !important;
+  color: rgba(255,255,255,0.85) !important;
+  font-weight: 600;
+}
+.cta-phone-label {
+  font-weight: 400;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+}
 
 /* ── FOOTER ── */
 .footer {
