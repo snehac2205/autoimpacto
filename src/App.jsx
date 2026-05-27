@@ -14,6 +14,7 @@ export default function App() {
         <span className="nav-logo">Sneha Turismo</span>
         <div className="nav-links">
           <a href="#how">{es ? 'Cómo funciona' : 'How it works'}</a>
+          <a href="#fleet">{es ? 'Nuestra Flota' : 'Our Fleet'}</a>
           <a href="#exterior">{es ? 'Exterior' : 'Exterior'}</a>
           <a href="#interior">{es ? 'Interior' : 'Interior'}</a>
           <a href="#pricing">{es ? 'Precios' : 'Pricing'}</a>
@@ -102,6 +103,37 @@ export default function App() {
               <span className="step-num">03</span>
               <h3>{es ? 'Instalación en 5 días' : 'Live in 5 days'}</h3>
               <p>{es ? 'Instalamos, y te enviamos fotos mensuales de tus anuncios en las calles.' : 'We install and send you monthly photos of your ads on the streets.'}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FLEET ── */}
+      <section id="fleet" className="section section-cream">
+        <div className="container">
+          <div className="section-header-center">
+            <span className="pill pill-dark">{es ? 'Nuestra Flota' : 'Our Fleet'}</span>
+            <h2>{es ? 'Los autos que llevan tu marca' : 'The cars carrying your brand'}</h2>
+            <p className="section-sub">
+              {es
+                ? 'Flota moderna de Ubers circulando diariamente por San José, Cartago, Heredia, Alajuela y Escazú.'
+                : 'A modern fleet of Ubers driving daily across San José, Cartago, Heredia, Alajuela and Escazú.'}
+            </p>
+          </div>
+          <div className="fleet-grid">
+            <div className="fleet-photo fleet-photo-wide">
+              <img src="/images/fleet-sunset.jpg" alt="Nammi 06 on the road" />
+              <div className="fleet-caption">
+                <strong>{es ? 'La flota completa' : 'The full fleet'}</strong>
+                <span>{es ? 'Nammi 06, Kia EV, Hyundai y más' : 'Nammi 06, Kia EV, Hyundai & more'}</span>
+              </div>
+            </div>
+            <div className="fleet-photo">
+              <img src="/images/fleet-group.jpg" alt="Sneha Turismo fleet" />
+              <div className="fleet-caption">
+                <strong>{es ? 'Nammi 06 — Insignia' : 'Nammi 06 — Flagship'}</strong>
+                <span>{es ? 'Recorriendo la GAM cada día' : 'Covering the GAM every day'}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -258,6 +290,11 @@ export default function App() {
           <a href={wa} className="btn-primary btn-large" target="_blank" rel="noreferrer">
             {es ? 'Escribir por WhatsApp' : 'Message on WhatsApp'}
           </a>
+          <div className="cta-contacts">
+            <a href="mailto:info@auto-impacto.com">info@auto-impacto.com</a>
+            <span className="footer-sep">·</span>
+            <a href="https://www.instagram.com/autoimpacto__" target="_blank" rel="noreferrer">@autoimpacto__</a>
+          </div>
         </div>
       </section>
 
@@ -267,7 +304,9 @@ export default function App() {
         <span className="footer-sep">·</span>
         <a href={wa} target="_blank" rel="noreferrer">+506 63091161</a>
         <span className="footer-sep">·</span>
-        <span>sneha.turismo@example.com</span>
+        <a href="mailto:info@auto-impacto.com">info@auto-impacto.com</a>
+        <span className="footer-sep">·</span>
+        <a href="https://www.instagram.com/autoimpacto__" target="_blank" rel="noreferrer">@autoimpacto__</a>
       </footer>
 
     </div>

@@ -10,7 +10,7 @@ const translations = {
       contact: 'Contacto'
     },
     aboutTitle: 'Quiénes somos',
-    aboutText: 'AutoImpacto ofrece soluciones innovadoras para tu negocio, combinando asesoría, capacitación y apoyo estratégico para lograr resultados tangibles.',
+    aboutText: 'Auto Impacto ofrece soluciones innovadoras para tu negocio, combinando asesoría, capacitación y apoyo estratégico para lograr resultados tangibles.',
     servicesTitle: 'Qué ofrecemos',
     services: [
       'Consultoría personalizada',
@@ -35,7 +35,7 @@ const translations = {
       contact: 'Contact'
     },
     aboutTitle: 'Who we are',
-    aboutText: 'AutoImpacto delivers innovative solutions for your business, combining consulting, training, and strategic support to achieve measurable results.',
+    aboutText: 'Auto Impacto delivers innovative solutions for your business, combining consulting, training, and strategic support to achieve measurable results.',
     servicesTitle: 'What we offer',
     services: [
       'Personalized consulting',

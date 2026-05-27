@@ -353,6 +353,53 @@ body { background: var(--white); color: var(--text); line-height: 1.6; }
   border-color: rgba(44,74,40,0.25);
 }
 
+/* ── FLEET ── */
+.fleet-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+.fleet-photo {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+.fleet-photo-wide { aspect-ratio: 16/9; }
+.fleet-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.fleet-photo:hover img { transform: scale(1.03); }
+.fleet-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 100%);
+  padding: 24px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.fleet-caption strong {
+  color: #fff;
+  font-size: 0.95rem;
+}
+.fleet-caption span {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .fleet-grid { grid-template-columns: 1fr; }
+  .fleet-photo-wide { aspect-ratio: 16/9; }
+}
+
 /* ── EXTERIOR PHOTOS ── */
 .ext-photos {
   display: flex;
@@ -531,6 +578,21 @@ body { background: var(--white); color: var(--text); line-height: 1.6; }
   font-size: 1rem;
   margin-bottom: 32px;
 }
+.cta-contacts {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.cta-contacts a {
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.2s;
+}
+.cta-contacts a:hover { color: #fff; }
 
 /* ── FOOTER ── */
 .footer {
