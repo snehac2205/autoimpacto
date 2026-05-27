@@ -4,296 +4,269 @@ export default function App() {
   const [lang, setLang] = useState('es')
   const es = lang === 'es'
 
+  const wa = 'https://wa.me/50663091161'
+
   return (
-    <div className="page">
+    <div className="site">
 
-      {/* ── Lang toggle ── */}
-      <div className="lang-bar">
-        <button className="lang-btn" onClick={() => setLang(lang === 'es' ? 'en' : 'es')}>
-          {lang === 'es' ? 'EN' : 'ES'}
-        </button>
-      </div>
+      {/* ── NAV ── */}
+      <nav className="nav">
+        <span className="nav-logo">Sneha Turismo</span>
+        <div className="nav-links">
+          <a href="#how">{es ? 'Cómo funciona' : 'How it works'}</a>
+          <a href="#exterior">{es ? 'Exterior' : 'Exterior'}</a>
+          <a href="#interior">{es ? 'Interior' : 'Interior'}</a>
+          <a href="#pricing">{es ? 'Precios' : 'Pricing'}</a>
+        </div>
+        <div className="nav-right">
+          <button className="lang-btn" onClick={() => setLang(lang === 'es' ? 'en' : 'es')}>
+            {lang === 'es' ? 'EN' : 'ES'}
+          </button>
+          <a href={wa} className="nav-cta" target="_blank" rel="noreferrer">
+            {es ? 'Contáctanos' : 'Contact us'}
+          </a>
+        </div>
+      </nav>
 
-      {/* ══════════════ HERO HEADER ══════════════ */}
-      <header className="hero-header">
-        <p className="brand-eyebrow">SNEHA TURISMO</p>
-        <h1>{es ? 'Propuesta de Alianza Publicitaria' : 'Advertising Partnership Proposal'}</h1>
-        {es
-          ? <p className="hero-sub">Advertising Partnership Proposal</p>
-          : <p className="hero-sub">Propuesta de Alianza Publicitaria</p>}
-      </header>
-
-      {/* ══════════════ PART 1 ══════════════ */}
-      <div className="section-label">
-        <span className="part-tag">PART 1:</span>
-        <span className="section-title">
-          {es ? 'PUBLICIDAD EXTERIOR' : 'EXTERIOR ADVERTISING'}
-        </span>
-        <span className="section-sub">
-          {es ? '/ Exterior Advertising' : '/ Publicidad Exterior'}
-        </span>
-      </div>
-
-      <div className="content-block">
-        <p className="intro-text">
-          {es
-            ? 'Nuestra flota de 8 Ubers circula todos los días en San José, Cartago, Heredia, Alajuela y Escazú, con muchas horas en presas — una audiencia cautiva de conductores, pasajeros y peatones que tienen el auto frente a los ojos.'
-            : 'Sneha Turismo operates a fleet of 8 Ubers driving daily through San José, Cartago, Heredia, Alajuela, and Escazú. Our cars spend hours in city traffic — stopped at red lights, queuing on Paseo Colón and Circunvalación, and parked at offices, malls, and restaurants. That means a captive audience of drivers, passengers, and pedestrians with nowhere else to look. We\'re opening a limited number of ad placements on our vehicles.'}
-        </p>
-        {es && (
-          <p className="intro-text italic">
-            Sneha Turismo operates a fleet of 8 Ubers driving daily through San José, Cartago, Heredia, Alajuela, and Escazú — a captive audience with nowhere else to look.
+      {/* ── HERO ── */}
+      <section className="hero">
+        <div className="hero-inner">
+          <p className="hero-tag">{es ? 'San José · Cartago · Heredia · Alajuela · Escazú' : 'San José · Cartago · Heredia · Alajuela · Escazú'}</p>
+          <h1>
+            {es
+              ? <>Tu marca en movimiento<br /><span className="hero-accent">por toda la GAM</span></>
+              : <>Your brand on the move<br /><span className="hero-accent">across the GAM</span></>}
+          </h1>
+          <p className="hero-sub">
+            {es
+              ? 'Publicidad en nuestra flota de 8 Ubers — calcomanías exteriores, volantes interiores, y respuesta directa vía WhatsApp.'
+              : 'Advertising on our fleet of 8 Ubers — exterior stickers, interior flyers, and direct response via WhatsApp.'}
           </p>
-        )}
-
-        {/* Stats */}
-        <div className="stats-row">
-          <div className="stat-box">
-            <span className="stat-num">8</span>
-            <span className="stat-label">{es ? 'UBERS EN FLOTA' : 'UBERS IN FLEET'}</span>
-            <span className="stat-sub">{es ? 'Ubers en flota' : 'Ubers en flota'}</span>
-          </div>
-          <div className="stat-box">
-            <span className="stat-num">~20</span>
-            <span className="stat-label">{es ? 'VIAJES / AUTO / DÍA' : 'TRIPS / CAR / DAY'}</span>
-            <span className="stat-sub">{es ? 'Viajes por auto al día' : 'Viajes por auto al día'}</span>
-          </div>
-          <div className="stat-box">
-            <span className="stat-num">15k+</span>
-            <span className="stat-label">{es ? 'IMPRESIONES MENSUALES*' : 'MONTHLY IMPRESSIONS*'}</span>
-            <span className="stat-sub">{es ? 'Impresiones mensuales por auto' : 'Impresiones mensuales por auto'}</span>
+          <div className="hero-actions">
+            <a href={wa} className="btn-primary" target="_blank" rel="noreferrer">
+              {es ? 'Solicitar propuesta' : 'Get a proposal'}
+            </a>
+            <a href="#how" className="btn-ghost">
+              {es ? 'Ver cómo funciona' : 'See how it works'}
+            </a>
           </div>
         </div>
+      </section>
 
-        {/* Two-column grid */}
-        <div className="two-col">
-          <div className="info-box">
-            <h3 className="box-title">{es ? 'QUÉ OFRECEMOS' : 'WHAT WE PROVIDE'} / {es ? 'What We Provide' : 'Qué Ofrecemos'}</h3>
+      {/* ── STATS ── */}
+      <section className="stats-bar">
+        <div className="stat">
+          <span className="stat-n">8</span>
+          <span className="stat-l">{es ? 'Ubers en flota' : 'Ubers in fleet'}</span>
+        </div>
+        <div className="stat-divider" />
+        <div className="stat">
+          <span className="stat-n">~20</span>
+          <span className="stat-l">{es ? 'viajes por auto / día' : 'trips per car / day'}</span>
+        </div>
+        <div className="stat-divider" />
+        <div className="stat">
+          <span className="stat-n">15k+</span>
+          <span className="stat-l">{es ? 'impresiones / auto / mes' : 'impressions / car / month'}</span>
+        </div>
+        <div className="stat-divider" />
+        <div className="stat">
+          <span className="stat-n">5</span>
+          <span className="stat-l">{es ? 'ciudades cubiertas' : 'cities covered'}</span>
+        </div>
+      </section>
+
+      {/* ── HOW IT WORKS ── */}
+      <section id="how" className="section section-light">
+        <div className="container">
+          <h2 className="section-heading">
+            {es ? 'Así de simple' : 'Simple as that'}
+          </h2>
+          <p className="section-sub">
+            {es ? 'De la conversación a tu anuncio en la calle en menos de una semana.' : 'From conversation to your ad on the street in under a week.'}
+          </p>
+          <div className="steps">
+            <div className="step">
+              <span className="step-num">01</span>
+              <h3>{es ? 'Elige tu plan' : 'Pick your plan'}</h3>
+              <p>{es ? 'Exterior, interior, o ambos. Por auto, paquete de 4, o flota completa.' : 'Exterior, interior, or both. Per car, 4-car package, or full fleet.'}</p>
+            </div>
+            <div className="step-arrow">→</div>
+            <div className="step">
+              <span className="step-num">02</span>
+              <h3>{es ? 'Aprueba el arte' : 'Approve the art'}</h3>
+              <p>{es ? 'Nosotros diseñamos o usamos tu arte. Tú apruebas antes de imprimir.' : 'We design it or use your art. You approve before we print.'}</p>
+            </div>
+            <div className="step-arrow">→</div>
+            <div className="step">
+              <span className="step-num">03</span>
+              <h3>{es ? 'Instalación en 5 días' : 'Live in 5 days'}</h3>
+              <p>{es ? 'Instalamos, y te enviamos fotos mensuales de tus anuncios en las calles.' : 'We install and send you monthly photos of your ads on the streets.'}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── EXTERIOR ── */}
+      <section id="exterior" className="section section-dark">
+        <div className="container two-col-layout">
+          <div className="col-text">
+            <span className="pill">{es ? 'Publicidad Exterior' : 'Exterior Advertising'}</span>
+            <h2>{es ? 'Tu logo en cada semáforo' : 'Your logo at every red light'}</h2>
+            <p>
+              {es
+                ? 'Calcomanías en ambas puertas traseras y el parachoques trasero. Minutos de exposición en cada presa — no segundos.'
+                : 'Stickers on both rear doors and rear bumper. Minutes of exposure at every traffic jam — not seconds.'}
+            </p>
             <ul className="feature-list">
-              <li>
-                <strong>{es ? 'Calcomanías exteriores en cada vehículo' : 'Exterior stickers on each vehicle'}</strong>
-                <span className="item-sub">{es ? 'Exterior stickers on each vehicle' : 'Calcomanías exteriores en cada vehículo'}</span>
-              </li>
-              <li>
-                <strong>{es ? 'Ambas puertas traseras + parachoques' : 'Both rear doors + rear bumper'}</strong>
-                <span className="item-sub">{es ? 'Both rear doors + rear bumper' : 'Ambas puertas traseras + parachoques'}</span>
-              </li>
-              <li>
-                <strong>{es ? 'Tamaños: 30×30 cm o 60×60 cm' : 'Sticker sizes: 1×1 ft or 2×2 ft'}</strong>
-                <span className="item-sub">{es ? 'Sticker sizes: 1×1 ft or 2×2 ft' : 'Tamaños: 30×30 cm o 60×60 cm'}</span>
-              </li>
-              <li>
-                <strong>{es ? 'Instalación, retiro e informe fotográfico' : 'Install, removal & monthly photo report'}</strong>
-                <span className="item-sub">{es ? 'Install, removal & monthly photo report' : 'Instalación, retiro e informe fotográfico'}</span>
-              </li>
-              <li>
-                <strong>{es ? 'Diseño por nosotros o traiga el suyo' : 'Design help or bring-your-own art'}</strong>
-                <span className="item-sub">{es ? 'Design help or bring-your-own art' : 'Diseño por nosotros o traiga el suyo'}</span>
-              </li>
+              <li>{es ? 'Tamaños: 30×30 cm o 60×60 cm' : 'Sizes: 1×1 ft or 2×2 ft (30×30 or 60×60 cm)'}</li>
+              <li>{es ? 'Código QR + WhatsApp en cada anuncio' : 'QR code + WhatsApp on every ad'}</li>
+              <li>{es ? 'Instalación, retiro e informe fotográfico mensual' : 'Install, removal & monthly photo report'}</li>
+              <li>{es ? 'Diseño incluido o trae el tuyo' : 'Design included or bring your own'}</li>
             </ul>
+            <a href={wa} className="btn-primary" target="_blank" rel="noreferrer">
+              {es ? 'Consultar disponibilidad' : 'Check availability'}
+            </a>
           </div>
-
-          <div className="info-box">
-            <h3 className="box-title">{es ? 'POR QUÉ FUNCIONA' : 'WHY IT WORKS'} / {es ? 'Why It Works' : 'Por Qué Funciona'}</h3>
-            <div className="why-item">
-              <strong>{es ? 'Audiencia cautiva en presas' : 'Captive audience in traffic'}</strong>
-              <p>{es ? 'Audiencia cautiva en presas — minutos, no segundos.' : 'Captive audience in traffic — minutes, not seconds.'}</p>
+          <div className="col-visual exterior-visual">
+            <div className="ext-photos">
+              <div className="ext-photo-main">
+                <img src="/images/side.jpg" alt="Side sticker placement" />
+                <span className="photo-label">{es ? 'Vista exterior' : 'Exterior view'}</span>
+              </div>
+              <div className="ext-photo-secondary">
+                <img src="/images/bumper.jpg" alt="Bumper sticker placement" />
+                <span className="photo-label">{es ? 'Parachoques' : 'Rear bumper'}</span>
+              </div>
             </div>
-            <div className="why-item">
-              <strong>{es ? 'Vallas móviles' : 'Moving billboards'}</strong>
-              <p>{es ? 'Vallas móviles en San José, Cartago, Heredia, Alajuela y Escazú.' : 'Moving billboards in San José, Cartago, Heredia, Alajuela and Escazú.'}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── INTERIOR ── */}
+      <section id="interior" className="section section-light">
+        <div className="container">
+          <div className="section-header-center">
+            <span className="pill pill-dark">{es ? 'Publicidad Interior' : 'Interior Advertising'}</span>
+            <h2>{es ? '15–30 minutos de atención total' : '15–30 minutes of full attention'}</h2>
+            <p className="section-sub">
+              {es
+                ? 'Cada pasajero sentado, sin a dónde más mirar. Tu marca frente a sus ojos todo el viaje.'
+                : 'Every passenger seated, with nowhere else to look. Your brand in front of them the whole ride.'}
+            </p>
+          </div>
+          <div className="interior-photos">
+            <div className="int-photo">
+              <img src="/images/dashboard.jpg" alt="Dashboard flyer placement" />
+              <div className="int-photo-info">
+                <h3>{es ? 'Volante en el tablero' : 'Dashboard Flyer'}</h3>
+                <p>{es ? 'Lo primero que ve el pasajero al subir.' : 'First thing riders see when they get in.'}</p>
+              </div>
             </div>
-            <div className="why-item">
-              <strong>{es ? 'Respuesta directa integrada' : 'Direct response built-in'}</strong>
-              <p>{es ? 'Código QR y WhatsApp en cada anuncio — llamadas directas.' : 'Your QR code + WhatsApp on every ad — calls and messages straight to you.'}</p>
+            <div className="int-photo">
+              <img src="/images/backseat.jpg" alt="Backseat flyer placement" />
+              <div className="int-photo-info">
+                <h3>{es ? 'Volante asiento trasero' : 'Backseat Flyer'}</h3>
+                <p>{es ? 'Detrás del cabezal — a la altura de los ojos.' : 'Behind the headrest — eye-level for rear passengers.'}</p>
+              </div>
+            </div>
+          </div>
+          <div className="interior-cards">
+            <div className="icard">
+              <div className="icard-icon">📂</div>
+              <h3>{es ? 'Folletos puerta delantera' : 'Front-Door Brochures'}</h3>
+              <p>{es ? 'Para llevar a casa — tu marca sigue trabajando.' : 'Take-home brochures — your brand keeps working.'}</p>
+            </div>
+            <div className="icard">
+              <div className="icard-icon">📖</div>
+              <h3>{es ? 'Folletos asiento trasero' : 'Back-Seat Brochures'}</h3>
+              <p>{es ? 'En la bolsa del asiento — para leer durante el viaje.' : 'In the seat pocket — read during the ride.'}</p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Pricing — Exterior */}
-      <div className="pricing-block">
-        <h3 className="pricing-title">
-          {es ? 'INVERSIÓN — EXTERIOR' : 'INVESTMENT — EXTERIOR'} / {es ? 'Investment — Exterior' : 'Inversión — Exterior'}
-        </h3>
-        <div className="pricing-row">
-          <div className="price-card">
-            <span className="price-tier">{es ? 'POR AUTO / Per Car' : 'PER CAR / Por Auto'}</span>
-            <span className="price-amount">₡50,000 <span className="price-freq">/ wk</span></span>
-            <span className="price-note">{es ? '2 stickers + parachoques' : '2 stickers + bumper'}</span>
+      {/* ── PRICING ── */}
+      <section id="pricing" className="section section-cream">
+        <div className="container">
+          <div className="section-header-center">
+            <h2>{es ? 'Planes y precios' : 'Plans & pricing'}</h2>
+            <p className="section-sub">
+              {es ? 'Mínimo 4 semanas. Diseño e impresión se cobran aparte.' : '4-week minimum. Design & printing billed separately.'}
+            </p>
           </div>
-          <div className="price-card">
-            <span className="price-tier">{es ? 'PAQUETE 4 AUTOS / 4-Car Package' : '4-CAR PACKAGE / Paquete'}</span>
-            <span className="price-amount">₡170,000 <span className="price-freq">/ wk</span></span>
-            <span className="price-note">{es ? '15% descuento de socio' : '15% partner discount'}</span>
+          <div className="pricing-tabs">
+            <div className="pricing-note">{es ? 'Exterior · Interior · O ambos con descuento adicional' : 'Exterior · Interior · Or both for an extra discount'}</div>
           </div>
-          <div className="price-card">
-            <span className="price-tier">{es ? 'FLOTA COMPLETA / Full Fleet' : 'FULL FLEET / Flota'}</span>
-            <span className="price-amount">₡320,000 <span className="price-freq">/ wk</span></span>
-            <span className="price-note">{es ? 'Los 8 vehículos' : 'All 8 vehicles'}</span>
+          <div className="pricing-cards">
+            <div className="pcard">
+              <h3>{es ? 'Por auto' : 'Per car'}</h3>
+              <div className="pcard-price">₡50,000<span>/sem</span></div>
+              <p>{es ? 'Ideal para probar el canal con 1 vehículo.' : 'Ideal for testing the channel with 1 vehicle.'}</p>
+              <ul>
+                <li>{es ? '2 stickers + parachoques' : '2 stickers + bumper'}</li>
+                <li>{es ? 'QR + WhatsApp incluidos' : 'QR + WhatsApp included'}</li>
+                <li>{es ? 'Informe fotográfico mensual' : 'Monthly photo report'}</li>
+              </ul>
+              <a href={wa} className="btn-outline" target="_blank" rel="noreferrer">
+                {es ? 'Empezar' : 'Get started'}
+              </a>
+            </div>
+            <div className="pcard pcard-featured">
+              <span className="pcard-badge">{es ? 'Más popular' : 'Most popular'}</span>
+              <h3>{es ? 'Paquete 4 autos' : '4-car package'}</h3>
+              <div className="pcard-price">₡170,000<span>/sem</span></div>
+              <p>{es ? '15% de descuento — mayor cobertura en la GAM.' : '15% discount — wider coverage across the GAM.'}</p>
+              <ul>
+                <li>{es ? '4 vehículos cubiertos' : '4 vehicles covered'}</li>
+                <li>{es ? 'Rotación por zonas' : 'Zone rotation'}</li>
+                <li>{es ? 'QR + WhatsApp incluidos' : 'QR + WhatsApp included'}</li>
+                <li>{es ? 'Informe fotográfico mensual' : 'Monthly photo report'}</li>
+              </ul>
+              <a href={wa} className="btn-primary" target="_blank" rel="noreferrer">
+                {es ? 'Empezar' : 'Get started'}
+              </a>
+            </div>
+            <div className="pcard">
+              <h3>{es ? 'Flota completa' : 'Full fleet'}</h3>
+              <div className="pcard-price">₡320,000<span>/sem</span></div>
+              <p>{es ? 'Máxima visibilidad — los 8 vehículos en circulación.' : 'Maximum visibility — all 8 vehicles on the road.'}</p>
+              <ul>
+                <li>{es ? '8 vehículos cubiertos' : '8 vehicles covered'}</li>
+                <li>{es ? 'San José, Cartago, Heredia, Alajuela, Escazú' : 'San José, Cartago, Heredia, Alajuela, Escazú'}</li>
+                <li>{es ? 'QR + WhatsApp incluidos' : 'QR + WhatsApp included'}</li>
+                <li>{es ? 'Informe fotográfico mensual' : 'Monthly photo report'}</li>
+              </ul>
+              <a href={wa} className="btn-outline" target="_blank" rel="noreferrer">
+                {es ? 'Empezar' : 'Get started'}
+              </a>
+            </div>
           </div>
-        </div>
-        <p className="pricing-footnote">
-          * {es
-            ? 'Tarifas indicativas; descuentos para el primer cliente. Mínimo 4 semanas. Diseño e impresión aparte.'
-            : 'Indicative rates — first-client discounts available. 4-week minimum. Design & printing billed separately (see back).'}
-        </p>
-      </div>
-
-      {/* ══════════════ PART 2 ══════════════ */}
-      <div className="section-label">
-        <span className="part-tag">PART 2:</span>
-        <span className="section-title">
-          {es ? 'PUBLICIDAD INTERIOR' : 'INTERIOR ADVERTISING'}
-        </span>
-        <span className="section-sub">
-          {es ? '/ Interior Advertising' : '/ Publicidad Interior'}
-        </span>
-      </div>
-
-      <div className="content-block">
-        <div className="hero-header-part2">
-          <h2>{es ? 'Complemento de Publicidad Interior' : 'Interior Advertising Add-On'}</h2>
-          <p className="sub-italic">{es ? 'Interior Advertising Add-On' : 'Publicidad Interior — Complemento'}</p>
-        </div>
-
-        <p className="intro-text">
-          {es
-            ? 'Cada viaje en Uber dura 15–30 minutos con la atención total del pasajero. La publicidad interior convierte ese tiempo en lectura real de su marca.'
-            : 'Every Uber ride is 15–30 minutes of undivided attention. Riders are seated, often bored, and looking for something to read. Interior advertising turns that time into direct engagement — not just a glimpse, but a full brand read.'}
-        </p>
-        {es && (
-          <p className="intro-text italic">
-            Every Uber ride is 15–30 minutes of undivided attention. Interior advertising turns that time into direct engagement.
-          </p>
-        )}
-
-        {/* 4 interior placement types */}
-        <div className="interior-grid">
-          <div className="interior-box">
-            <h4>{es ? 'VOLANTE EN EL TABLERO' : 'DASHBOARD FLYER'}</h4>
-            <p className="item-sub-title">{es ? 'Dashboard Flyer' : 'Volante en el tablero'}</p>
-            <p>{es ? 'Volante A4/Carta en el tablero — lo primero que ve el pasajero.' : 'A4/Letter flyer on the dashboard — first thing riders see.'}</p>
-            <p className="item-sub">{es ? 'A4/Letter flyer on the dashboard — first thing riders see.' : 'Volante en el tablero — lo primero que ve el pasajero.'}</p>
-          </div>
-          <div className="interior-box">
-            <h4>{es ? 'VOLANTE EN ASIENTO TRASERO' : 'BACKSEAT FLYER'}</h4>
-            <p className="item-sub-title">{es ? 'Backseat Flyer' : 'Volante en asiento trasero'}</p>
-            <p>{es ? 'Detrás del cabezal delantero — a la altura de los ojos.' : 'Back of the front headrest — eye-level for rear passengers.'}</p>
-            <p className="item-sub">{es ? 'Back of the front headrest — eye-level for rear passengers.' : 'Detrás del cabezal delantero — a la altura de los ojos.'}</p>
-          </div>
-          <div className="interior-box">
-            <h4>{es ? 'FOLLETOS ASIENTO DELANTERO' : 'FRONT-SEAT BROCHURES'}</h4>
-            <p className="item-sub-title">{es ? 'Front-Seat Brochures' : 'Folletos asiento delantero'}</p>
-            <p>{es ? 'Folletos en la puerta delantera para llevar.' : 'Brochures in the front door pocket for riders to take home.'}</p>
-            <p className="item-sub">{es ? 'Brochures in the front door pocket for riders to take home.' : 'Folletos en la puerta delantera para llevar.'}</p>
-          </div>
-          <div className="interior-box">
-            <h4>{es ? 'FOLLETOS ASIENTO TRASERO' : 'BACK-SEAT BROCHURES'}</h4>
-            <p className="item-sub-title">{es ? 'Back-Seat Brochures' : 'Folletos asiento trasero'}</p>
-            <p>{es ? 'Folletos en la bolsa del asiento — para leer en el viaje.' : 'Brochures in the seat-back pocket — read during the ride.'}</p>
-            <p className="item-sub">{es ? 'Brochures in the seat-back pocket — read during the ride.' : 'Folletos en la bolsa del asiento — para leer en el viaje.'}</p>
-          </div>
-        </div>
-
-        {/* Why interior works */}
-        <div className="why-interior-block">
-          <h3 className="box-title">
-            {es ? 'POR QUÉ FUNCIONA' : 'WHY INTERIOR ADS DELIVER'} / {es ? 'Why Interior Ads Deliver' : 'Por Qué Funciona'}
-          </h3>
-          <p>
-            <strong>{es ? 'Tiempo de atención.' : 'Dwell time / Tiempo de atención.'}</strong>{' '}
-            {es
-              ? '15–30 min con su volante frente al pasajero. 15–30 min with your flyer in front of the rider.'
-              : '15–30 min with your flyer in front of the rider. 15–30 min con su volante frente al pasajero.'}
-          </p>
-          <p>
-            <strong>{es ? 'Material para llevar.' : 'Take-aways / Material para llevar.'}</strong>{' '}
-            {es
-              ? 'El folleto se va con el pasajero; su marca sigue trabajando. Brochures leave with the passenger — your brand keeps working.'
-              : 'Brochures leave with the passenger — your brand keeps working. El folleto se va con el pasajero; su marca sigue trabajando.'}
-          </p>
-          <p>
-            <strong>{es ? 'Código QR y WhatsApp.' : 'QR + WhatsApp / Código QR y WhatsApp.'}</strong>{' '}
-            {es
-              ? 'Llamadas y mensajes directos; estadísticas mensuales de escaneos. Direct calls & messages; monthly scan statistics.'
-              : 'Direct calls & messages; monthly scan statistics. Llamadas y mensajes directos; estadísticas mensuales de escaneos.'}
+          <p className="pricing-fine">
+            * {es
+              ? 'Tarifas indicativas. Descuentos para primeros clientes. Contáctenos para una propuesta personalizada.'
+              : 'Indicative rates. First-client discounts available. Contact us for a custom proposal.'}
           </p>
         </div>
-      </div>
+      </section>
 
-      {/* Pricing — Interior */}
-      <div className="pricing-block">
-        <h3 className="pricing-title">
-          {es ? 'INVERSIÓN — INTERIOR' : 'INVESTMENT — INTERIOR'} / {es ? 'Investment — Interior' : 'Inversión — Interior'}
-        </h3>
-        <div className="pricing-row">
-          <div className="price-card">
-            <span className="price-tier">{es ? 'POR AUTO / Per Car' : 'PER CAR / Por Auto'}</span>
-            <span className="price-amount">₡50,000 <span className="price-freq">/ wk</span></span>
-            <span className="price-note">{es ? 'Volantes + folletos' : 'Flyers + brochures'}</span>
-          </div>
-          <div className="price-card">
-            <span className="price-tier">{es ? 'PAQUETE 4 AUTOS / 4-Car Package' : '4-CAR PACKAGE / Paquete'}</span>
-            <span className="price-amount">₡170,000 <span className="price-freq">/ wk</span></span>
-            <span className="price-note">{es ? '15% descuento de socio' : '15% partner discount'}</span>
-          </div>
-          <div className="price-card">
-            <span className="price-tier">{es ? 'FLOTA COMPLETA / Full Fleet' : 'FULL FLEET / Flota'}</span>
-            <span className="price-amount">₡320,000 <span className="price-freq">/ wk</span></span>
-            <span className="price-note">{es ? 'Los 8 vehículos' : 'All 8 vehicles'}</span>
-          </div>
+      {/* ── CTA BANNER ── */}
+      <section className="cta-banner">
+        <div className="container">
+          <h2>{es ? '¿Listo para poner tu marca en movimiento?' : 'Ready to put your brand on the move?'}</h2>
+          <p>{es ? 'Escríbenos por WhatsApp y tenemos una propuesta lista en 24 horas.' : 'Message us on WhatsApp and we\'ll have a proposal ready in 24 hours.'}</p>
+          <a href={wa} className="btn-primary btn-large" target="_blank" rel="noreferrer">
+            {es ? 'Escribir por WhatsApp' : 'Message on WhatsApp'}
+          </a>
         </div>
-        <p className="pricing-footnote">
-          {es
-            ? 'Misma tarifa que exterior; combine ambos para descuento adicional. Same rate as exterior — bundle both for an additional discount.'
-            : 'Same rate as exterior — bundle both for an additional discount. Misma tarifa; combine ambos para descuento adicional.'}
-        </p>
-      </div>
+      </section>
 
-      {/* Design & Printing */}
-      <div className="content-block">
-        <div className="design-section">
-          <h3 className="box-title">
-            {es ? 'DISEÑO E IMPRESIÓN' : 'DESIGN & PRINTING'} / {es ? 'Design & Printing' : 'Diseño e Impresión'}
-          </h3>
-          <p>
-            {es
-              ? 'Diseño e impresión se cobran aparte. Calcomanías exteriores: aprox. US$25 / pie² (ej. 30×30 cm). Nosotros coordinamos todo el proceso.'
-              : 'Design and printing are billed separately. Exterior stickers: approx. US$25 / sq ft (e.g., 30×30 cm). We coordinate everything end-to-end.'}
-          </p>
-          {es && <p className="italic">Design and printing are billed separately. Exterior stickers: approx. US$25 / sq ft. We coordinate everything end-to-end.</p>}
-        </div>
-      </div>
-
-      {/* Next Steps */}
-      <div className="next-steps">
-        <h3>{es ? 'PRÓXIMOS PASOS' : 'NEXT STEPS'} / {es ? 'Next Steps' : 'Próximos Pasos'}</h3>
-        <ol>
-          <li>
-            {es
-              ? 'Elija exterior, interior o ambos / Choose exterior, interior, or both'
-              : 'Choose exterior, interior, or both / Elija exterior, interior o ambos'}
-          </li>
-          <li>
-            {es
-              ? 'Apruebe el arte / Approve art'
-              : 'Approve art / Apruebe el arte'}
-          </li>
-          <li>
-            {es
-              ? 'Instalación en 5 días / Install in 5 days'
-              : 'Install in 5 days / Instalación en 5 días'}
-          </li>
-        </ol>
-      </div>
-
-      {/* Footer */}
-      <footer className="page-footer">
-        <strong>Sneha Turismo — Melvin</strong>
-        <span className="footer-sep">•</span>
-        <span>WhatsApp / Tel: +506 ____</span>
-        <span className="footer-sep">•</span>
+      {/* ── FOOTER ── */}
+      <footer className="footer">
+        <span className="footer-brand">Sneha Turismo</span>
+        <span className="footer-sep">·</span>
+        <a href={wa} target="_blank" rel="noreferrer">+506 63091161</a>
+        <span className="footer-sep">·</span>
         <span>sneha.turismo@example.com</span>
       </footer>
 
