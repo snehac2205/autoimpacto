@@ -15,8 +15,8 @@ export default function App() {
         <div className="nav-links">
           <a href="#how">{es ? 'Cómo funciona' : 'How it works'}</a>
           <a href="#fleet">{es ? 'Nuestra Flota' : 'Our Fleet'}</a>
-          <a href="#exterior">{es ? 'Exterior' : 'Exterior'}</a>
           <a href="#interior">{es ? 'Interior' : 'Interior'}</a>
+          <a href="#exterior">{es ? 'Exterior' : 'Exterior'}</a>
           <a href="#pricing">{es ? 'Precios' : 'Pricing'}</a>
         </div>
         <div className="nav-right">
@@ -149,42 +149,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── EXTERIOR ── */}
-      <section id="exterior" className="section section-dark">
-        <div className="container two-col-layout">
-          <div className="col-text">
-            <span className="pill">{es ? 'Publicidad Exterior' : 'Exterior Advertising'}</span>
-            <h2>{es ? 'Tu logo en cada semáforo' : 'Your logo at every red light'}</h2>
-            <p>
-              {es
-                ? 'Calcomanías en ambas puertas traseras y el parachoques trasero. Minutos de exposición en cada presa — no segundos.'
-                : 'Stickers on both rear doors and rear bumper. Minutes of exposure at every traffic jam — not seconds.'}
-            </p>
-            <ul className="feature-list">
-              <li>{es ? 'Tamaños: 30×30 cm o 60×60 cm' : 'Sizes: 1×1 ft or 2×2 ft (30×30 or 60×60 cm)'}</li>
-              <li>{es ? 'Código QR + WhatsApp en cada anuncio' : 'QR code + WhatsApp on every ad'}</li>
-              <li>{es ? 'Instalación, retiro e informe fotográfico mensual' : 'Install, removal & monthly photo report'}</li>
-              <li>{es ? 'Diseño incluido o trae el tuyo' : 'Design included or bring your own'}</li>
-            </ul>
-            <a href={wa} className="btn-primary" target="_blank" rel="noreferrer">
-              {es ? 'Consultar disponibilidad' : 'Check availability'}
-            </a>
-          </div>
-          <div className="col-visual exterior-visual">
-            <div className="ext-photos">
-              <div className="ext-photo-main">
-                <img src="/images/side.jpg" alt="Side sticker placement" />
-                <span className="photo-label">{es ? 'Vista exterior' : 'Exterior view'}</span>
-              </div>
-              <div className="ext-photo-secondary">
-                <img src="/images/bumper.jpg" alt="Bumper sticker placement" />
-                <span className="photo-label">{es ? 'Parachoques' : 'Rear bumper'}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── INTERIOR ── */}
       <section id="interior" className="section section-light">
         <div className="container">
@@ -223,6 +187,42 @@ export default function App() {
               <div className="icard-icon">📖</div>
               <h3>{es ? 'Folletos asiento trasero' : 'Back-Seat Brochures'}</h3>
               <p>{es ? 'En la bolsa del asiento — para leer durante el viaje.' : 'In the seat pocket — read during the ride.'}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── EXTERIOR ── */}
+      <section id="exterior" className="section section-dark">
+        <div className="container two-col-layout">
+          <div className="col-text">
+            <span className="pill">{es ? 'Publicidad Exterior' : 'Exterior Advertising'}</span>
+            <h2>{es ? 'Tu logo en cada semáforo' : 'Your logo at every red light'}</h2>
+            <p>
+              {es
+                ? 'Calcomanías en ambas puertas traseras y el parachoques trasero. Minutos de exposición en cada presa — no segundos.'
+                : 'Stickers on both rear doors and rear bumper. Minutes of exposure at every traffic jam — not seconds.'}
+            </p>
+            <ul className="feature-list">
+              <li>{es ? 'Tamaños: 30×30 cm o 60×60 cm' : 'Sizes: 1×1 ft or 2×2 ft (30×30 or 60×60 cm)'}</li>
+              <li>{es ? 'Código QR + WhatsApp en cada anuncio' : 'QR code + WhatsApp on every ad'}</li>
+              <li>{es ? 'Instalación, retiro e informe fotográfico mensual' : 'Install, removal & monthly photo report'}</li>
+              <li>{es ? 'Diseño incluido o trae el tuyo' : 'Design included or bring your own'}</li>
+            </ul>
+            <a href={wa} className="btn-primary" target="_blank" rel="noreferrer">
+              {es ? 'Consultar disponibilidad' : 'Check availability'}
+            </a>
+          </div>
+          <div className="col-visual exterior-visual">
+            <div className="ext-photos">
+              <div className="ext-photo-main">
+                <img src="/images/side.jpg" alt="Side sticker placement" />
+                <span className="photo-label">{es ? 'Vista exterior' : 'Exterior view'}</span>
+              </div>
+              <div className="ext-photo-secondary">
+                <img src="/images/bumper.jpg" alt="Bumper sticker placement" />
+                <span className="photo-label">{es ? 'Parachoques' : 'Rear bumper'}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -319,23 +319,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
       <footer className="footer">
-        <img src="/images/logo.jpeg" alt="Auto Impacto" className="footer-logo" />
-        <span className="footer-sep">·</span>
-        <a href={wa} target="_blank" rel="noreferrer">WhatsApp</a>
-        <span className="footer-sep">·</span>
-        <a href="tel:+50663091161">📞 +506 6309-1161</a>
-        <span className="footer-sep">·</span>
-        <a href="mailto:info@auto-impacto.com" className="footer-icon-link">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          info@auto-impacto.com
-        </a>
-        <span className="footer-sep">·</span>
-        <a href="https://www.instagram.com/autoimpacto__" target="_blank" rel="noreferrer" className="footer-icon-link">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          @autoimpacto__
-        </a>
+        <span>© {new Date().getFullYear()} Auto Impacto</span>
       </footer>
 
     </div>
