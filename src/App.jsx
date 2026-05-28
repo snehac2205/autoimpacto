@@ -11,7 +11,7 @@ export default function App() {
 
       {/* ── NAV ── */}
       <nav className="nav">
-        <span className="nav-logo">Sneha Turismo</span>
+        <img src="/images/logo.jpeg" alt="Auto Impacto" className="nav-logo" />
         <div className="nav-links">
           <a href="#how">{es ? 'Cómo funciona' : 'How it works'}</a>
           <a href="#fleet">{es ? 'Nuestra Flota' : 'Our Fleet'}</a>
@@ -57,23 +57,33 @@ export default function App() {
       {/* ── STATS ── */}
       <section className="stats-bar">
         <div className="stat">
-          <span className="stat-n">8</span>
-          <span className="stat-l">{es ? 'Ubers en flota' : 'Ubers in fleet'}</span>
+          <span className="stat-n">200</span>
+          <span className="stat-l">km / {es ? 'auto / día' : 'car / day'}</span>
+          <span className="stat-tag">{es ? 'POR AUTO' : 'PER CAR'}</span>
         </div>
         <div className="stat-divider" />
         <div className="stat">
-          <span className="stat-n">~20</span>
-          <span className="stat-l">{es ? 'viajes por auto / día' : 'trips per car / day'}</span>
+          <span className="stat-n">1,600</span>
+          <span className="stat-l">km / {es ? 'día · 8 autos' : 'day · 8 cars'}</span>
+          <span className="stat-tag">{es ? 'FLOTA DIARIA' : 'FLEET DAILY'}</span>
         </div>
         <div className="stat-divider" />
         <div className="stat">
-          <span className="stat-n">15k+</span>
-          <span className="stat-l">{es ? 'impresiones / auto / mes' : 'impressions / car / month'}</span>
+          <span className="stat-n">11,200</span>
+          <span className="stat-l">km / {es ? 'semana' : 'week'}</span>
+          <span className="stat-tag">{es ? 'FLOTA SEMANAL' : 'FLEET WEEKLY'}</span>
         </div>
         <div className="stat-divider" />
         <div className="stat">
-          <span className="stat-n">5</span>
-          <span className="stat-l">{es ? 'ciudades cubiertas' : 'cities covered'}</span>
+          <span className="stat-n">~380K</span>
+          <span className="stat-l">{es ? 'mensual · amplio alcance' : 'monthly · broad reach'}</span>
+          <span className="stat-tag">{es ? 'IMPRESIONES EXTERNAS' : 'EXTERNAL IMPRESSIONS'}</span>
+        </div>
+        <div className="stat-divider" />
+        <div className="stat">
+          <span className="stat-n">~5.7K</span>
+          <span className="stat-l">15–30 min {es ? 'tiempo de atención' : 'dwell time'}</span>
+          <span className="stat-tag">{es ? 'IMPRESIONES INTERNAS' : 'INTERNAL IMPRESSIONS'}</span>
         </div>
       </section>
 
@@ -311,7 +321,7 @@ export default function App() {
 
       {/* ── FOOTER ── */}
       <footer className="footer">
-        <span className="footer-brand">Sneha Turismo</span>
+        <img src="/images/logo.jpeg" alt="Auto Impacto" className="footer-logo" />
         <span className="footer-sep">·</span>
         <a href={wa} target="_blank" rel="noreferrer">WhatsApp</a>
         <span className="footer-sep">·</span>
