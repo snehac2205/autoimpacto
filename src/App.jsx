@@ -157,8 +157,8 @@ export default function App() {
             <h2>{es ? '15–30 minutos de atención total' : '15–30 minutes of full attention'}</h2>
             <p className="section-sub">
               {es
-                ? 'Cada pasajero sentado, sin a dónde más mirar. Tu marca frente a sus ojos todo el viaje.'
-                : 'Every passenger seated, fully present for 15–30 minutes. Your brand in front of them the whole ride.'}
+                ? 'Cada viaje en Uber dura 15–30 minutos con la atención total del pasajero. La publicidad interior convierte ese tiempo en lectura real de su marca.'
+                : 'Every Uber ride is 15–30 minutes of undivided attention. Riders are seated, often bored, and looking for something to read. Interior advertising turns that time into direct engagement — not just a glimpse, but a full brand read.'}
             </p>
           </div>
           <div className="interior-photos">
@@ -232,52 +232,50 @@ export default function App() {
       <section id="pricing" className="section section-cream">
         <div className="container">
           <div className="section-header-center">
-            <h2>{es ? 'Planes y precios' : 'Plans & pricing'}</h2>
+            <h2>{es ? 'Elija Su Modelo — Dos Opciones' : 'Choose Your Pricing — Two Options'}</h2>
             <p className="section-sub">
-              {es ? 'Mínimo 4 semanas. Diseño e impresión se cobran aparte.' : '4-week minimum. Design & printing billed separately.'}
+              {es ? 'Interior y exterior se cotizan por separado — elija uno o ambos.' : 'Interior and exterior priced separately — choose one or both.'}
             </p>
           </div>
           <div className="pricing-tabs">
-            <div className="pricing-note">{es ? 'Exterior · Interior · O ambos con descuento adicional' : 'Exterior · Interior · Or both for an extra discount'}</div>
+            <div className="pricing-note">{es ? 'Exterior · Interior · O ambos' : 'Exterior · Interior · Or both'}</div>
           </div>
           <div className="pricing-cards">
             <div className="pcard">
-              <h3>{es ? 'Por auto' : 'Per car'}</h3>
+              <h3>{es ? 'Opción 1 — Tarifa Fija Semanal' : 'Option 1 — Flat Weekly Rate'}</h3>
               <div className="pcard-price">₡50,000<span>{es ? '/sem' : '/wk'}</span></div>
-              <p>{es ? 'Ideal para probar el canal con 1 vehículo.' : 'Ideal for testing the channel with 1 vehicle.'}</p>
+              <p>{es ? 'Por auto · ≈ US$100 por semana · Usted cubre la impresión.' : 'Per car · ≈ US$100 per week · You cover printing.'}</p>
               <ul>
-                <li>{es ? '2 stickers + parachoques' : '2 stickers + bumper'}</li>
-                <li>{es ? 'QR + WhatsApp incluidos' : 'QR + WhatsApp included'}</li>
+                <li>{es ? 'QR + WhatsApp en cada anuncio' : 'QR + WhatsApp on every ad'}</li>
                 <li>{es ? 'Informe fotográfico mensual' : 'Monthly photo report'}</li>
+                <li>{es ? 'Diseño incluido o trae el tuyo' : 'Design included or bring your own'}</li>
               </ul>
               <a href={wa} className="btn-outline" target="_blank" rel="noreferrer">
                 {es ? 'Empezar' : 'Get started'}
               </a>
             </div>
             <div className="pcard pcard-featured">
-              <span className="pcard-badge">{es ? 'Más popular' : 'Most popular'}</span>
-              <h3>{es ? 'Paquete 4 autos' : '4-car package'}</h3>
-              <div className="pcard-price">₡170,000<span>{es ? '/sem' : '/wk'}</span></div>
-              <p>{es ? '15% de descuento — mayor cobertura en la GAM.' : '15% discount — wider coverage across the GAM.'}</p>
+              <span className="pcard-badge">{es ? 'Volumen' : 'Volume'}</span>
+              <h3>{es ? 'Cotizaciones Personalizadas' : 'Customized Quotes'}</h3>
+              <div className="pcard-price" style={{fontSize:'1.4rem'}}>{es ? 'A medida' : 'Tailored'}</div>
+              <p>{es ? 'Llámenos para escalar — descuentos por volumen en varios autos o semanas. Nos adaptamos a cualquier presupuesto.' : 'Call us to discuss scaling — volume discounts on multi-car & multi-week commitments. We accommodate any budget.'}</p>
               <ul>
-                <li>{es ? '4 vehículos cubiertos' : '4 vehicles covered'}</li>
-                <li>{es ? 'Rotación por zonas' : 'Zone rotation'}</li>
-                <li>{es ? 'QR + WhatsApp incluidos' : 'QR + WhatsApp included'}</li>
-                <li>{es ? 'Informe fotográfico mensual' : 'Monthly photo report'}</li>
+                <li>{es ? 'Descuentos por volumen' : 'Volume discounts'}</li>
+                <li>{es ? 'Multi-auto o multi-semana' : 'Multi-car or multi-week'}</li>
+                <li>{es ? 'Cualquier presupuesto' : 'Any budget'}</li>
               </ul>
               <a href={wa} className="btn-primary" target="_blank" rel="noreferrer">
-                {es ? 'Empezar' : 'Get started'}
+                {es ? 'Consultar' : 'Get a quote'}
               </a>
             </div>
             <div className="pcard">
-              <h3>{es ? 'Flota completa' : 'Full fleet'}</h3>
-              <div className="pcard-price">₡320,000<span>{es ? '/sem' : '/wk'}</span></div>
-              <p>{es ? 'Máxima visibilidad — los 8 vehículos en circulación.' : 'Maximum visibility — all 8 vehicles on the road.'}</p>
+              <h3>{es ? 'Opción 2 — Reparto de Ingresos' : 'Option 2 — Revenue Share'}</h3>
+              <div className="pcard-price">10%</div>
+              <p>{es ? 'Nosotros cubrimos la impresión a cambio del reparto de ingresos.' : 'We cover printing in exchange for the revenue share.'}</p>
               <ul>
-                <li>{es ? '8 vehículos cubiertos' : '8 vehicles covered'}</li>
-                <li>{es ? 'San José, Cartago, Heredia, Alajuela, Escazú' : 'San José, Cartago, Heredia, Alajuela, Escazú'}</li>
-                <li>{es ? 'QR + WhatsApp incluidos' : 'QR + WhatsApp included'}</li>
-                <li>{es ? 'Informe fotográfico mensual' : 'Monthly photo report'}</li>
+                <li>{es ? 'Alianza basada en resultados' : 'Performance-based partnership'}</li>
+                <li>{es ? '10% sobre ingresos generados por escaneos QR' : '10% on revenue from QR-code scans'}</li>
+                <li>{es ? 'Informes mensuales de escaneos' : 'Monthly scan reporting'}</li>
               </ul>
               <a href={wa} className="btn-outline" target="_blank" rel="noreferrer">
                 {es ? 'Empezar' : 'Get started'}
@@ -285,9 +283,9 @@ export default function App() {
             </div>
           </div>
           <p className="pricing-fine">
-            * {es
-              ? 'Tarifas indicativas. Descuentos para primeros clientes. Contáctenos para una propuesta personalizada.'
-              : 'Indicative rates. First-client discounts available. Contact us for a custom proposal.'}
+            {es
+              ? 'Con la Opción 1, diseño e impresión se cobran aparte (calcomanías aprox. US$25/pie²). Con la Opción 2, nosotros cubrimos la impresión. En ambos casos coordinamos todo el proceso.'
+              : 'Under Option 1, design and printing are billed to you (exterior stickers approx. US$25/sq ft). Under Option 2, we cover printing costs. Either way, we coordinate the process end-to-end.'}
           </p>
         </div>
       </section>
@@ -301,8 +299,8 @@ export default function App() {
             {es ? 'Escribir por WhatsApp' : 'Message on WhatsApp'}
           </a>
           <div className="cta-contacts">
-            <a href="tel:+50663091161" className="cta-phone">
-              <span className="cta-phone-label">{es ? 'O llámenos:' : 'Or call us:'}</span>
+            <a href={wa} target="_blank" rel="noreferrer" className="cta-icon-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.117 1.528 5.847L.057 23.571a.75.75 0 0 0 .925.924l5.724-1.472A11.952 11.952 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.523-5.179-1.433l-.371-.22-3.397.873.888-3.397-.242-.381A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
               +506 6309-1161
             </a>
             <span className="footer-sep">·</span>
