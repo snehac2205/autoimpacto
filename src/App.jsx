@@ -33,6 +33,11 @@ export default function App() {
       <section className="hero">
         <div className="hero-inner">
           <p className="hero-tag">{es ? 'San José · Cartago · Heredia · Alajuela · Escazú' : 'San José · Cartago · Heredia · Alajuela · Escazú'}</p>
+          <p className="hero-hook">
+            {es
+              ? '¿Cansado de pagar por anuncios que nadie ve? Hay una mejor manera.'
+              : 'Tired of paying for ads that get ignored? There\'s a better way.'}
+          </p>
           <h1>
             {es
               ? <>Tu marca en movimiento<br /><span className="hero-accent">por toda la GAM</span></>
@@ -40,8 +45,8 @@ export default function App() {
           </h1>
           <p className="hero-sub">
             {es
-              ? 'Publicidad en nuestra flota de 8 Ubers — calcomanías exteriores, volantes interiores, y respuesta directa vía WhatsApp.'
-              : 'Advertising on our fleet of 8 Ubers — exterior stickers, interior flyers, and direct response via WhatsApp.'}
+              ? 'Publicidad en nuestra flota de 8 autos y creciendo — calcomanías exteriores, volantes interiores, y respuesta directa vía WhatsApp.'
+              : 'Advertising on our fleet of 8 cars and counting — exterior stickers, interior flyers, and direct response via WhatsApp.'}
           </p>
           <div className="hero-actions">
             <a href={wa} className="btn-primary" target="_blank" rel="noreferrer">
@@ -100,7 +105,7 @@ export default function App() {
             <div className="step">
               <span className="step-num">01</span>
               <h3>{es ? 'Elige tu plan' : 'Pick your plan'}</h3>
-              <p>{es ? 'Exterior, interior, o ambos. Por auto, paquete de 4, o flota completa.' : 'Exterior, interior, or both. Per car, 4-car package, or full fleet.'}</p>
+              <p>{es ? 'Exterior, interior, o ambos. Elija la Opción 1 (tarifa fija) o la Opción 2 (reparto de ingresos).' : 'Exterior, interior, or both. Choose Option 1 (flat rate) or Option 2 (revenue share).'}</p>
             </div>
             <div className="step-arrow">→</div>
             <div className="step">
@@ -157,7 +162,7 @@ export default function App() {
             <h2>{es ? '15–30 minutos de atención total' : '15–30 minutes of full attention'}</h2>
             <p className="section-sub">
               {es
-                ? 'Cada viaje en Uber dura 15–30 minutos con la atención total del pasajero. La publicidad interior convierte ese tiempo en lectura real de su marca.'
+                ? 'Cada viaje en Uber dura 15–30 minutos con la atención total del pasajero. Los pasajeros están sentados, a menudo sin qué hacer, buscando algo que leer. La publicidad interior convierte ese tiempo en interacción directa con su marca — no un vistazo, sino una lectura completa.'
                 : 'Every Uber ride is 15–30 minutes of undivided attention. Riders are seated, often bored, and looking for something to read. Interior advertising turns that time into direct engagement — not just a glimpse, but a full brand read.'}
             </p>
           </div>
@@ -242,9 +247,13 @@ export default function App() {
           </div>
           <div className="pricing-cards">
             <div className="pcard">
+              <span className="pcard-promo">{es ? '🔥 40% OFF — hasta fin de julio' : '🔥 40% OFF — until end of July'}</span>
               <h3>{es ? 'Opción 1 — Tarifa Fija Semanal' : 'Option 1 — Flat Weekly Rate'}</h3>
-              <div className="pcard-price">₡50,000<span>{es ? '/sem' : '/wk'}</span></div>
-              <p>{es ? 'Por auto · ≈ US$100 por semana · Usted cubre la impresión.' : 'Per car · ≈ US$100 per week · You cover printing.'}</p>
+              <div className="pcard-price">
+                ₡45,000<span>{es ? '/sem' : '/wk'}</span>
+              </div>
+              <div className="pcard-was">{es ? 'Precio regular: ₡75,000/sem' : 'Regular price: ₡75,000/wk'}</div>
+              <p>{es ? 'Por auto · Usted cubre la impresión.' : 'Per car · You cover printing.'}</p>
               <ul>
                 <li>{es ? 'QR + WhatsApp en cada anuncio' : 'QR + WhatsApp on every ad'}</li>
                 <li>{es ? 'Informe fotográfico mensual' : 'Monthly photo report'}</li>
