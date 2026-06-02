@@ -92,6 +92,29 @@ export default function App() {
         </div>
       </section>
 
+      {/* ── GLOBAL PROOF ── */}
+      <section className="section section-dark global-proof">
+        <div className="container two-col-layout">
+          <div className="global-proof-img">
+            <img src="/images/global-proof.png" alt="Car advertising in city traffic" />
+          </div>
+          <div className="col-text">
+            <span className="pill">{es ? 'Probado a nivel mundial' : 'Proven worldwide'}</span>
+            <h2>{es ? 'Estrategia global. Calles locales.' : 'Global strategy. Local streets.'}</h2>
+            <p>
+              {es
+                ? 'La publicidad en vehículos es uno de los canales más efectivos en ciudades como Nueva York, Londres, Tokio y Ciudad de México — miles de impresiones diarias a una fracción del costo de los medios tradicionales. Nosotros traemos ese modelo probado directamente a las calles de San José.'
+                : 'Vehicle advertising is one of the most effective channels in cities like New York, London, Tokyo and Mexico City — thousands of daily impressions at a fraction of traditional media costs. We\'re bringing that proven model directly to the streets of San José.'}
+            </p>
+            <ul className="feature-list">
+              <li>{es ? 'Modelo usado en más de 50 países' : 'Model used in 50+ countries'}</li>
+              <li>{es ? 'Miles de impresiones diarias por vehículo' : 'Thousands of daily impressions per vehicle'}</li>
+              <li>{es ? 'Respuesta directa — no solo visibilidad' : 'Direct response — not just visibility'}</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* ── HOW IT WORKS ── */}
       <section id="how" className="section section-light">
         <div className="container">
