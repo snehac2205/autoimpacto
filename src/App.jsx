@@ -96,7 +96,7 @@ export default function App() {
       <section className="section section-dark global-proof">
         <div className="container two-col-layout">
           <div className="global-proof-img">
-            <img src="/images/global-proof.png" alt="Car advertising in city traffic" />
+            <img src="/images/global-proof.jpeg" alt="Car advertising in city traffic" />
           </div>
           <div className="col-text">
             <span className="pill">{es ? 'Probado a nivel mundial' : 'Proven worldwide'}</span>
