@@ -351,6 +351,10 @@ export default function App() {
 
       <footer className="footer">
         <span>© {new Date().getFullYear()} Auto Impacto</span>
+        <span className="footer-sep">·</span>
+        <a href="/privacy-policy.html" target="_blank" rel="noreferrer">
+          {es ? 'Política de Privacidad' : 'Privacy Policy'}
+        </a>
       </footer>
 
     </div>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad — Auto Impacto</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --green-dark: #2c4a28;
+      --green-mid: #3d6b32;
+      --gold: #c9a84c;
+      --cream: #f5f0e4;
+      --text: #1a2318;
+      --text-mid: #3d4a35;
+      --text-light: #6b7a60;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    }
+    body { background: #fff; color: var(--text); line-height: 1.7; }
+
+    .nav {
+      background: #fff;
+      border-bottom: 1px solid #e8e3d8;
+      padding: 0 40px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav a { text-decoration: none; font-weight: 600; color: var(--green-dark); font-size: 0.9rem; }
+    .nav a:hover { color: var(--green-mid); }
+    .nav-logo { height: 56px; width: auto; mix-blend-mode: multiply; }
+
+    .lang-toggle {
+      background: none;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      color: var(--text-mid);
+      font-family: inherit;
+    }
+    .lang-toggle:hover { border-color: var(--green-mid); color: var(--green-dark); }
+
+    .hero-bar {
+      background: linear-gradient(135deg, #1e3a1a 0%, var(--green-dark) 100%);
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .hero-bar h1 { color: #fff; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 8px; }
+    .hero-bar p { color: rgba(255,255,255,0.65); font-size: 0.9rem; }
+
+    .content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px 40px 80px;
+    }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+
+    h2 { font-size: 1.05rem; font-weight: 700; color: var(--green-dark); margin: 36px 0 10px; }
+    p { font-size: 0.95rem; color: var(--text-mid); margin-bottom: 12px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 0.95rem; color: var(--text-mid); margin-bottom: 6px; }
+    a { color: var(--green-dark); }
+    .updated {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      margin-bottom: 40px;
+    }
+
+    footer {
+      background: #111;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 20px 24px;
+      font-size: 0.82rem;
+    }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer a:hover { color: #fff; }
+
+    @media (max-width: 600px) {
+      .nav { padding: 0 20px; }
+      .content { padding: 40px 24px 64px; }
+      .hero-bar { padding: 48px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/"><img src="/images/logo.jpeg" alt="Auto Impacto" class="nav-logo" /></a>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <a href="/">← <span id="back-label">Volver al sitio</span></a>
+    <button class="lang-toggle" onclick="toggleLang()" id="lang-btn">EN</button>
+  </div>
+</nav>
+
+<div class="hero-bar">
+  <h1 id="page-title">Política de Privacidad</h1>
+  <p>Auto Impacto · Sneha LLC Sociedad de Responsabilidad Limitada · Costa Rica</p>
+</div>
+
+<div class="content">
+
+  <!-- SPANISH -->
+  <div class="lang-section active" id="es">
+    <p class="updated">Última actualización: 17 de junio de 2026</p>
+
+    <h2>1. Responsable del tratamiento de datos</h2>
+    <p>Sneha LLC Sociedad de Responsabilidad Limitada ("Auto Impacto", "nosotros") es la entidad responsable del tratamiento de los datos personales recopilados a través de nuestros anuncios y formularios en Facebook e Instagram.</p>
+    <ul>
+      <li>Sitio web: auto-impacto.com</li>
+      <li>Correo electrónico: <a href="mailto:info@auto-impacto.com">info@auto-impacto.com</a></li>
+      <li>WhatsApp: <a href="https://wa.me/50663091161">+506 6309 1161</a></li>
+    </ul>
+
+    <h2>2. Datos que recopilamos</h2>
+    <p>Cuando usted completa nuestro formulario publicitario en Facebook o Instagram, recopilamos los siguientes datos personales:</p>
+    <ul>
+      <li>Nombre</li>
+      <li>Correo electrónico</li>
+      <li>Número de teléfono</li>
+      <li>Nombre del negocio</li>
+      <li>Tipo de negocio</li>
+    </ul>
+    <p>Solo recopilamos los datos que usted nos proporciona voluntariamente al completar el formulario.</p>
+
+    <h2>3. Finalidad del tratamiento</h2>
+    <p>Utilizamos sus datos personales únicamente para los siguientes fines:</p>
+    <ul>
+      <li>Contactarle para brindarle información sobre nuestros servicios de publicidad móvil en vehículos.</li>
+      <li>Dar seguimiento a su interés y responder a sus consultas.</li>
+      <li>Coordinar una posible contratación de nuestros servicios.</li>
+    </ul>
+    <p>No utilizamos sus datos para ningún otro fin distinto a los aquí descritos.</p>
+
+    <h2>4. Consentimiento</h2>
+    <p>Al completar y enviar nuestro formulario, usted otorga su consentimiento libre, expreso e informado para que Sneha LLC Sociedad de Responsabilidad Limitada trate sus datos personales conforme a esta Política de Privacidad.</p>
+
+    <h2>5. Almacenamiento y conservación</h2>
+    <p>Sus datos se almacenan de forma privada en una hoja de cálculo de Google (Google Sheets), accesible únicamente por personal autorizado de Sneha LLC Sociedad de Responsabilidad Limitada. Dado que utilizamos los servicios de Google, sus datos pueden ser almacenados en servidores ubicados fuera de Costa Rica, bajo las medidas de seguridad que Google provee.</p>
+    <p>Conservaremos sus datos solo durante el tiempo necesario para cumplir con las finalidades descritas, o hasta que usted solicite su eliminación.</p>
+
+    <h2>6. Divulgación a terceros</h2>
+    <p>No vendemos, alquilamos ni compartimos sus datos personales con terceros con fines comerciales. Sus datos únicamente se procesan a través de las plataformas necesarias para nuestra operación (Meta y Google), las cuales actúan como proveedores de servicios.</p>
+
+    <h2>7. Sus derechos</h2>
+    <p>De conformidad con la Ley N.º 8968 de Protección de la Persona frente al tratamiento de sus datos personales, usted tiene derecho a:</p>
+    <ul>
+      <li>Acceder a sus datos personales.</li>
+      <li>Solicitar la rectificación de datos inexactos.</li>
+      <li>Solicitar la eliminación de sus datos.</li>
+      <li>Revocar su consentimiento en cualquier momento.</li>
+    </ul>
+    <p>Para ejercer cualquiera de estos derechos, escríbanos a <a href="mailto:info@auto-impacto.com">info@auto-impacto.com</a> o a nuestro WhatsApp <a href="https://wa.me/50663091161">+506 6309 1161</a>. Asimismo, usted puede presentar reclamos ante la Agencia de Protección de Datos de los Habitantes (PRODHAB) de Costa Rica.</p>
+
+    <h2>8. Seguridad</h2>
+    <p>Aplicamos medidas razonables para proteger sus datos contra acceso no autorizado, pérdida o uso indebido. El acceso a la información está restringido al personal autorizado de Sneha LLC Sociedad de Responsabilidad Limitada.</p>
+
+    <h2>9. Cambios a esta política</h2>
+    <p>Podemos actualizar esta Política de Privacidad ocasionalmente. La versión vigente estará siempre disponible en auto-impacto.com/privacy-policy con su respectiva fecha de actualización.</p>
+
+    <h2>10. Contacto</h2>
+    <p>Si tiene preguntas sobre esta política o sobre el tratamiento de sus datos, contáctenos:</p>
+    <ul>
+      <li>Correo: <a href="mailto:info@auto-impacto.com">info@auto-impacto.com</a></li>
+      <li>WhatsApp: <a href="https://wa.me/50663091161">+506 6309 1161</a></li>
+    </ul>
+  </div>
+
+  <!-- ENGLISH -->
+  <div class="lang-section" id="en">
+    <p class="updated">Last updated: June 17, 2026</p>
+
+    <h2>1. Data controller</h2>
+    <p>Sneha LLC Sociedad de Responsabilidad Limitada ("Auto Impacto", "we") is the entity responsible for processing personal data collected through our ads and forms on Facebook and Instagram.</p>
+    <ul>
+      <li>Website: auto-impacto.com</li>
+      <li>Email: <a href="mailto:info@auto-impacto.com">info@auto-impacto.com</a></li>
+      <li>WhatsApp: <a href="https://wa.me/50663091161">+506 6309 1161</a></li>
+    </ul>
+
+    <h2>2. Data we collect</h2>
+    <p>When you complete our advertising form on Facebook or Instagram, we collect the following personal data:</p>
+    <ul>
+      <li>Name</li>
+      <li>Email address</li>
+      <li>Phone number</li>
+      <li>Business name</li>
+      <li>Type of business</li>
+    </ul>
+    <p>We only collect data that you voluntarily provide by completing the form.</p>
+
+    <h2>3. Purpose of processing</h2>
+    <p>We use your personal data solely for the following purposes:</p>
+    <ul>
+      <li>To contact you and provide information about our mobile vehicle advertising services.</li>
+      <li>To follow up on your interest and respond to your inquiries.</li>
+      <li>To coordinate a potential engagement of our services.</li>
+    </ul>
+    <p>We do not use your data for any purpose other than those described here.</p>
+
+    <h2>4. Consent</h2>
+    <p>By completing and submitting our form, you give your free, express, and informed consent for Sneha LLC Sociedad de Responsabilidad Limitada to process your personal data in accordance with this Privacy Policy.</p>
+
+    <h2>5. Storage and retention</h2>
+    <p>Your data is stored privately in a Google Spreadsheet (Google Sheets), accessible only by authorized personnel of Sneha LLC Sociedad de Responsabilidad Limitada. Since we use Google's services, your data may be stored on servers located outside Costa Rica, under the security measures provided by Google.</p>
+    <p>We will retain your data only for as long as necessary to fulfill the purposes described, or until you request its deletion.</p>
+
+    <h2>6. Disclosure to third parties</h2>
+    <p>We do not sell, rent, or share your personal data with third parties for commercial purposes. Your data is only processed through the platforms necessary for our operation (Meta and Google), which act as service providers.</p>
+
+    <h2>7. Your rights</h2>
+    <p>In accordance with Costa Rica's Law No. 8968 on the Protection of Individuals Regarding the Processing of Personal Data, you have the right to:</p>
+    <ul>
+      <li>Access your personal data.</li>
+      <li>Request the correction of inaccurate data.</li>
+      <li>Request the deletion of your data.</li>
+      <li>Withdraw your consent at any time.</li>
+    </ul>
+    <p>To exercise any of these rights, write to us at <a href="mailto:info@auto-impacto.com">info@auto-impacto.com</a> or on WhatsApp at <a href="https://wa.me/50663091161">+506 6309 1161</a>. You may also file complaints with Costa Rica's Agency for the Protection of Inhabitants' Data (PRODHAB).</p>
+
+    <h2>8. Security</h2>
+    <p>We apply reasonable measures to protect your data against unauthorized access, loss, or misuse. Access to information is restricted to authorized personnel of Sneha LLC Sociedad de Responsabilidad Limitada.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>We may update this Privacy Policy occasionally. The current version will always be available at auto-impacto.com/privacy-policy with its corresponding update date.</p>
+
+    <h2>10. Contact</h2>
+    <p>If you have questions about this policy or the processing of your data, contact us:</p>
+    <ul>
+      <li>Email: <a href="mailto:info@auto-impacto.com">info@auto-impacto.com</a></li>
+      <li>WhatsApp: <a href="https://wa.me/50663091161">+506 6309 1161</a></li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <span>© <span id="year"></span> Auto Impacto · <a href="/">auto-impacto.com</a></span>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  let currentLang = 'es';
+
+  function toggleLang() {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    document.getElementById('es').classList.toggle('active', currentLang === 'es');
+    document.getElementById('en').classList.toggle('active', currentLang === 'en');
+    document.getElementById('lang-btn').textContent = currentLang === 'es' ? 'EN' : 'ES';
+    document.getElementById('page-title').textContent = currentLang === 'es' ? 'Política de Privacidad' : 'Privacy Policy';
+    document.getElementById('back-label').textContent = currentLang === 'es' ? 'Volver al sitio' : 'Back to site';
+    document.documentElement.lang = currentLang;
+  }
+</script>
+</body>
+</html>
